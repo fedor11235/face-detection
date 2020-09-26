@@ -1,6 +1,6 @@
 # FaceDetectionOpenCV
 
-Датасет не большой! Качество готовой модели будет низкое!
+### Датасет не большой! Качество готовой модели будет низкое!
 
 #### Извлечение контрольных точек для тренировки модели:
 python extract_embeddings.py --dataset dataset --embeddings output/embeddings.pickle --detector face_detection_model --embedding-model openface.nn4.small2.v1.t7
