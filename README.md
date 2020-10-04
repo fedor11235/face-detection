@@ -1,15 +1,15 @@
 # FaceDetectionOpenCV
 
-### Датасет не большой! Качество готовой модели будет низкое!
+### Dataset is not big! The quality of the finished model will be low!
 
-#### Извлечение контрольных точек для тренировки модели:
+#### Extracting control points to train the model:
 python extract_embeddings.py --dataset dataset --embeddings output/embeddings.pickle --detector face_detection_model --embedding-model openface.nn4.small2.v1.t7
 
-#### Тренировка модели по извлеченным точкам:
+#### Train the model with extracted points:
 python train_model.py --embeddings output/embeddings.pickle --recognizer output/recognizer.pickle --le output/le.pickle
 
-#### Проверка модели по изображениям не учавствоваших в тренировки:
+#### Checking the model using images not participating in training:
 python recognize.py --detector face_detection_model --embedding-model openface.nn4.small2.v1.t7 --recognizer output/recognizer.pickle --le output/le.pickle --image images\JaredLeto.jpg
 
-#### Определение лиц с вебкамеры:
+#### Detecting faces from the webcam:
 python recognize_video.py --detector face_detection_model --embedding-model openface.nn4.small2.v1.t7 --recognizer output/recognizer.pickle --le output/le.pickle
