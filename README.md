@@ -1,4 +1,4 @@
-# FaceDetectionOpenCV
+# face-detection
 
 ### Dataset is not big! The quality of the finished model will be low!
 
